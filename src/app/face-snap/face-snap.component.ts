@@ -18,7 +18,7 @@ export class FaceSnapComponent implements OnInit {
   onSnap() {
     if (this.snapButton === 'Oh Snap!') {
       this.faceSnap.snap++;
-      this.snapButton = 'Oops on Snap!'
+      this.snapButton = 'Oops unSnap!'
     } else {
       this.faceSnap.snap--;
       this.snapButton = 'Oh Snap!';
