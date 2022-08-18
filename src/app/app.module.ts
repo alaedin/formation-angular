@@ -6,6 +6,7 @@ import { FaceSnapComponent } from './face-snap/face-snap.component';
 import {registerLocaleData} from "@angular/common";
 import { FaceSnapListComponent } from './face-snap-list/face-snap-list.component';
 import { HeaderComponent } from './header/header.component';
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -16,6 +17,8 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+
 
   ],
   providers: [
