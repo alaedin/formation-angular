@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {interval, Observable} from "rxjs";
-import {filter, map} from "rxjs/operators"
+import {filter, interval, map, Observable, tap} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -18,9 +17,12 @@ export class AppComponent implements OnInit {
       map(value => value % 2 === 0 ?
         `the number ${value} is pair` :
         `the number ${value} is odd`
-      )
-    )
-    ;
+      ),
+      tap(value => this.logger(value)),
+    );
+  }
 
+  logger(text: string) {
+    console.log('Log ' + text);
   }
 }
