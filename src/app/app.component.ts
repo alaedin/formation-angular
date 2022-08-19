@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {interval, Observable} from "rxjs";
-import {map} from "rxjs/operators"
+import {filter, map} from "rxjs/operators"
 
 @Component({
   selector: 'app-root',
@@ -14,11 +14,13 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.interval$ = interval(1000).pipe(
+      filter(value => value % 3 === 0),
       map(value => value % 2 === 0 ?
         `the number ${value} is pair` :
         `the number ${value} is odd`
-        )
-    );
+      )
+    )
+    ;
 
   }
 }
