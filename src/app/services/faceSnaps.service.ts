@@ -55,7 +55,7 @@ export class FaceSnapsService {
     const faceSnap: FaceSnap = {
       ...formValue,
       createdDate: new Date(),
-      id: this.faceSnaps[this.faceSnaps.length - 1].id + 1,
+      id: Math.max(...this.faceSnaps.map(value => value.id)),
       snap: 0,
     }
     this.faceSnaps.push(faceSnap);
