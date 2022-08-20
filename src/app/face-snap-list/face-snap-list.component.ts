@@ -8,9 +8,8 @@ import {Observable, Subject} from "rxjs";
   templateUrl: './face-snap-list.component.html',
   styleUrls: ['./face-snap-list.component.scss']
 })
-export class FaceSnapListComponent implements OnInit, OnDestroy {
+export class FaceSnapListComponent implements OnInit {
   faceSnaps$!: Observable<FaceSnap[]>;
-  private destroy$!: Subject<boolean>;
 
   constructor(private faceSnapsService: FaceSnapsService) {
   }
@@ -18,9 +17,4 @@ export class FaceSnapListComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.faceSnaps$ = this.faceSnapsService.getAllSnaps();
   }
-
-  ngOnDestroy(): void {
-    this.destroy$.next(true);
-  }
-
 }
