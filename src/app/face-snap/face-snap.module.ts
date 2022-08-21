@@ -5,7 +5,7 @@ import {FaceSnapListComponent} from "./components/face-snap-list/face-snap-list.
 import {SingleFaceSnapComponent} from "./components/single-face-snap/single-face-snap.component";
 import {NewFaceSnapComponent} from "./components/new-face-snap/new-face-snap.component";
 import {ReactiveFormsModule} from "@angular/forms";
-import {RouterModule} from "@angular/router";
+import {FaceSnapRoutingModule} from "./face-snap-routing.module";
 
 
 @NgModule({
@@ -18,7 +18,7 @@ import {RouterModule} from "@angular/router";
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    RouterModule,
+    FaceSnapRoutingModule,
 
 
   ],
@@ -29,5 +29,5 @@ import {RouterModule} from "@angular/router";
     NewFaceSnapComponent,
   ]
 })
-export class FaceSnapsModule {
+export class FaceSnapModule {
 }

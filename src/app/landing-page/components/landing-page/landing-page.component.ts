@@ -18,7 +18,7 @@ export class LandingPageComponent implements OnInit {
   }
 
   onNavigate(): void {
-    this.router.navigateByUrl('face-snaps').then(r => r)
+    this.router.navigateByUrl('face-snap').then(r => r)
   }
 
   onSubmitForm(form: NgForm): void{

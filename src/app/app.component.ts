@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   yellowTrainsCalled = 0;
 
   ngOnInit() {
-    /*interval(500).pipe(
+/*    interval(500).pipe(
       take(10),
       map(value => value % 2 === 0 ? 'rouge' : 'jaune'),
       tap(color => console.log(`La lumière s'allume en %c${color}`, `color: ${this.translateColor(color)}`)),

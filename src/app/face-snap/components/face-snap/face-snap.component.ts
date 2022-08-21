@@ -21,8 +21,7 @@ export class FaceSnapComponent implements OnInit {
 
 
   onViewFaceSnap() {
-
-    this.route.navigateByUrl(`face-snaps/${ this.faceSnap.id}`);
+    this.route.navigateByUrl(`face-snap/${ this.faceSnap.id}`);
 
   }
 }

@@ -1,7 +1,7 @@
 <div class="face-snap-card" *ngIf="faceSnap$  | async as faceSnap"
      [ngClass]="{snapped: snapButton==='Oops unSnap!'}">
   <h2>{{faceSnap.title | uppercase}}</h2>
-  <a routerLink="/face-snaps">Back</a>
+  <a routerLink="/face-snap">Back</a>
   <p>Mise en ligne {{faceSnap.createdDate | date: 'le d MMMM yyyy à hh:mm '}} </p>
   <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
   <p>{{faceSnap.description}}</p>
