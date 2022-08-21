@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {FormsModule, NgForm} from "@angular/forms";
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-landing-page',
